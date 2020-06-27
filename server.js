@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
-const cTable = require("console.table");
-const { isMainThread } = require("worker_threads");
+require("console.table");
+
 
 
 var connection = mysql.createConnection({
@@ -21,4 +21,15 @@ function start() {
         message: "Select a menu",
         choices: ["Departments", "Roles", "Employees"]
       })
-      
+       switch (response.action) {
+        case "Departments":
+            departmentsMenu()
+            break;
+        case "Roles":
+            roleMenu();
+            break;
+        case "Employees Menu":
+            employeesMenu();
+            break;
+    }
+}
