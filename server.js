@@ -6,30 +6,39 @@ require("console.table");
 
 var connection = mysql.createConnection({
     host: "localhost",
-    port: 2323,
+    port: 3306,
     user: "root",
     password: "Chicken23!",
     database: "employee_tracker"
 });
-connection.connect(err => {if (err) throw err;  start();
+
+connection.connect(err => {if (err) throw (err);  start();
 });
 function start() {
-    inquirer
-      .prompt({
-        name: "name",
-        type: "list",
-        message: "Select a menu",
-        choices: ["Departments", "Roles", "Employees"]
-      })
-       switch (response.action) {
-        case "Departments":
-            departmentsMenu()
-            break;
-        case "Roles":
-            roleMenu();
-            break;
-        case "Employees Menu":
-            employeesMenu();
-            break;
-    }
-}
+    const viewOptions = [
+        "View Departments",
+        "View Roles",
+        "View Employees",
+        "Update Employee",
+        "exit"
+    ];
+    
+    const employeeOptions = [
+        "John Doe",
+        "Joe John",
+        "John Joe",
+        "Tim Jimmy",
+        "Jim Timmy",
+        "Jimbo Smith",
+        "Keith Johnson",
+        "exit"
+    ];
+    
+    const updateOptions = [
+        "First Name",
+        "Last Name",
+        "Role",
+        "exit"
+    ];
+    
+   
