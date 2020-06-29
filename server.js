@@ -87,3 +87,42 @@ function start() {
         })
     }
     
+    function employeeView() {
+        var sqlStr = "SELECT first_name, last_name, title, salary FROM employee ";
+        sqlStr += "LEFT JOIN role ";
+        sqlStr += "ON employee.role_id = role.id"
+        connection.query(sqlStr, function (err, result) {
+            if (err) throw err;
+    
+            console.table(result)
+            start();
+        })
+    }
+    
+    function roleView() {
+        var sqlStr = "SELECT * FROM role";
+        connection.query(sqlStr, function (err, result) {
+            if (err) throw err;
+    
+            console.table(result)
+            start();
+        })
+    }
+    
+    
+    const updateEmployee = () => {
+    
+        function runUpdateSearch() {
+            inquirer
+                .prompt({
+                    name: "action",
+                    type: "list",
+                    message: "Which employee do you want to update?",
+                    choices: employeeOptions
+
+                })
+               
+        }
+        runUpdateSearch();  
+    }
+}
