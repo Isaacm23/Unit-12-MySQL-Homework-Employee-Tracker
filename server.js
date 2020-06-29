@@ -112,17 +112,6 @@ function start() {
     
     const updateEmployee = () => {
     
-        function runUpdateSearch() {
-            inquirer
-                .prompt({
-                    name: "action",
-                    type: "list",
-                    message: "Which employee do you want to update?",
-                    choices: employeeOptions
-
-                })
-               
-        }
-        runUpdateSearch();  
+ 
     }
 }
