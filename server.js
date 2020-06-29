@@ -77,4 +77,13 @@ function start() {
     
     
     
+    function departmentView() {
+        var sqlStr = "SELECT * FROM department";
+        connection.query(sqlStr, function (err, result) {
+            if (err) throw err;
+    
+            console.table(result)
+        start();
+        })
+    }
     
