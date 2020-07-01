@@ -34,8 +34,8 @@ Build a command-line application that at a minimum allows the user to:
   * Update employee roles
 
 ## VISUALS 
-![gif](./images/hw12.gif)
-![gif](./images/hw122.gif)
+![gif](./images/betterhw12.gif)
+![gif](./images/betterhw122.gif)
 ![](./images/hw12pic)
 
 ## INSTALLATION 
