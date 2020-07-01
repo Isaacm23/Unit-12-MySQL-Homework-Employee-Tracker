@@ -3,7 +3,6 @@
 ## Description
 Design the following database schema containing three tables:
 
-![Database Schema](Assets/schema.png)
 
 * **department**:
 
@@ -36,7 +35,7 @@ Build a command-line application that at a minimum allows the user to:
 ## VISUALS 
 ![gif](./images/betterhw12.gif)
 ![gif](./images/betterhw122.gif)
-![](./images/hw12pic)
+![](./images/hw12pic.jpg)
 
 ## INSTALLATION 
 Node.js, MySql, and Visual Studios 
