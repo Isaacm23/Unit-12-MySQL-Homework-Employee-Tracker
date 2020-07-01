@@ -40,7 +40,7 @@ Build a command-line application that at a minimum allows the user to:
 ## INSTALLATION 
 Node.js, MySql, and Visual Studios 
 ## USAGE 
-With the use of node.js, Mysql visual studio, this application can be used as a note taker.
+With the use of node.js, Mysql visual studio, this application can be used as a employee tracker.
 ## SUPPORT 
 we all need help once in awhile
 
