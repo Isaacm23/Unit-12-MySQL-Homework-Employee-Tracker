@@ -24,23 +24,6 @@ function start() {
         "exit"
     ];
     
-    const employeeOptions = [
-        "John Doe",
-        "Joe John",
-        "John Joe",
-        "Tim Jimmy",
-        "Jim Timmy",
-        "Jimbo Smith",
-        "Keith Johnson",
-        "exit"
-    ];
-    
-    const updateOptions = [
-        "First Name",
-        "Last Name",
-        "Role",
-        "exit"
-    ];
     
     start();
     
@@ -70,7 +53,7 @@ function start() {
                         add();
                    
                     case viewOptions[5]:
-                        connection.end();
+                        
                         break
                 }
             })
@@ -145,7 +128,7 @@ function start() {
                 connection.query(`INSERT INTO department (name) VALUES ('${name}')`, function (err, data) {
                     if (err) throw err;
                     console.log(`Added`)
-                    
+                    start();
                 })
             })
     }
@@ -186,7 +169,7 @@ function addRole() {
                 connection.query(`INSERT INTO role (title, salary, department_id) VALUES ('${title}', '${salary}', ${index})`, function (err, data) {
                     if (err) throw err;
                     console.log(`Added`)
-                    getJob();
+                    start();
                 })
             })
     })
@@ -247,7 +230,7 @@ function addEmployee() {
                     connection.query(queryText, function (err, data) {
                         if (err) throw err;
 
-                        getJob();
+                        start();
                     })
                 })
 
